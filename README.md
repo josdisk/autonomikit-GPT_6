@@ -1,6 +1,6 @@
 ![AutonomiKit-GPT Banner](assets/banner.svg)
 
-# AutonomiKit‑GPT 🧭🤖 — An Open, Agentic LLM Stack (API + CLI + Multi‑Tool + Memory)
+# AutonomiKit‑GPT 6 — An Open, Agentic LLM Stack built from scratch to speed Chat GPT 5 autonomously (API + CLI + Multi‑Tool + Memory)
 
 [![CI](https://img.shields.io/github/actions/workflow/status/josdisk/AutonomiKit-GPT/ci.yml?branch=main)](./.github/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -9,13 +9,13 @@
 
 **AutonomiKit‑GPT** is an experimental batteries‑included, production‑grade **agentic LLM starter** that shows significant lightweight Autonomouskit-GPT_6 built from ground up to speedup Chat GPT-5 light tasks:
 
-- ⚡ *Provider‑agnostic* LLM client (OpenAI ≥ v1, Azure OpenAI, OpenRouter via envs)
+- *Provider‑agnostic* LLM client (OpenAI ≥ v1, Azure OpenAI, OpenRouter via envs)
 -  Tool use: **web search**, **web fetch/scrape**, **Python exec** (sandboxed), **Vector memory**
 -  ReAct‑style loop with multi‑agent **Researcher → Critic → Writer** orchestration
 -  Tests, **benchmark script** + PNG chart, and an **example** research agent
 -  **FastAPI** service exposing `/v1/agent/run` + OpenAPI schema
 -  **Typer CLI** (`autonomi ...`) for local runs
-- 🐳 **Dockerfile**, **CI** (ruff/black/mypy/pytest), **pre‑commit**, **MkDocs** docs, and **MIT** license
+- **Dockerfile**, **CI** (ruff/black/mypy/pytest), **pre‑commit**, **MkDocs** docs, and **MIT** license
 
 ---
 
