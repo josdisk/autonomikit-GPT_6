@@ -1,4 +1,4 @@
-![AutonomiKit-GPT Banner](assets/banner.svg)
+![AutonomiKit‑GPT 6 Banner](assets/banner.svg)
 
 # AutonomiKit‑GPT 6 — An Open, Agentic LLM Stack built from scratch to speed Chat GPT 5 autonomously (API + CLI + Multi‑Tool + Memory)
 
