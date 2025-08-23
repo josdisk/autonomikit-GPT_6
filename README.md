@@ -7,19 +7,15 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](#)
 [![Docs](https://img.shields.io/badge/Docs-mkdocs%20material-informational.svg)](./docs)
 
-**AutonomiKit‑GPT** is a batteries‑included, production‑grade **agentic LLM starter** that shows
-you can ship serious OSS even as a solo builder. It includes:
+**AutonomiKit‑GPT** is an experimental batteries‑included, production‑grade **agentic LLM starter** that shows significant lightweight Autonomouskit-GPT_6 built from ground up to speedup Chat GPT-5 light tasks:
 
-- ⚡️ *Provider‑agnostic* LLM client (OpenAI ≥ v1, Azure OpenAI, OpenRouter via envs)
-- 🧰 Tool use: **web search**, **web fetch/scrape**, **Python exec** (sandboxed), **Vector memory**
-- 🧠 ReAct‑style loop with multi‑agent **Researcher → Critic → Writer** orchestration
-- 🧪 Tests, **benchmark script** + PNG chart, and an **example** research agent
-- 🖥 **FastAPI** service exposing `/v1/agent/run` + OpenAPI schema
-- 💻 **Typer CLI** (`autonomi ...`) for local runs
+- ⚡ *Provider‑agnostic* LLM client (OpenAI ≥ v1, Azure OpenAI, OpenRouter via envs)
+-  Tool use: **web search**, **web fetch/scrape**, **Python exec** (sandboxed), **Vector memory**
+-  ReAct‑style loop with multi‑agent **Researcher → Critic → Writer** orchestration
+-  Tests, **benchmark script** + PNG chart, and an **example** research agent
+-  **FastAPI** service exposing `/v1/agent/run` + OpenAPI schema
+-  **Typer CLI** (`autonomi ...`) for local runs
 - 🐳 **Dockerfile**, **CI** (ruff/black/mypy/pytest), **pre‑commit**, **MkDocs** docs, and **MIT** license
-
-> ✨ Use this as a portfolio‑quality repo to impress **recruiters, clients, and sponsors**.
-> Drop in your sponsor links in `.github/FUNDING.yml`, turn on GitHub Pages for docs, and you’re off.
 
 ---
 
