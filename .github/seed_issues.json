@@ -1,0 +1,84 @@
+[
+  {
+    "title": "Docs: add GIF demo in README and docs/home",
+    "labels": [
+      "good first issue",
+      "documentation"
+    ],
+    "body": "Create a short screen recording of the CLI and dashboard and add it to README.md and docs/index.md. Place media in /assets."
+  },
+  {
+    "title": "Tool: add wikipedia search/fetch",
+    "labels": [
+      "good first issue",
+      "tools",
+      "enhancement"
+    ],
+    "body": "Implement a new tool `wikipedia` with actions: search(query), page(title/id). Add docs and tests."
+  },
+  {
+    "title": "Tests: expand smoke tests for tools",
+    "labels": [
+      "good first issue",
+      "tests"
+    ],
+    "body": "Write unit tests covering web_search, python_exec (happy path + timeout), and vector_store add/query."
+  },
+  {
+    "title": "CI: add coverage report badge",
+    "labels": [
+      "good first issue",
+      "CI"
+    ],
+    "body": "Update CI to run coverage, upload to Codecov or produce a badge stored in docs (if Codecov not desired)."
+  },
+  {
+    "title": "API: add /v1/health/details endpoint",
+    "labels": [
+      "good first issue",
+      "api",
+      "enhancement"
+    ],
+    "body": "Expose provider + model + enabled tools list at /v1/health/details. Add to docs."
+  },
+  {
+    "title": "Dashboard: loading skeleton and toast errors",
+    "labels": [
+      "good first issue",
+      "dashboard",
+      "enhancement"
+    ],
+    "body": "Improve UX with a loading skeleton for result card and a simple toast on errors."
+  },
+  {
+    "title": "Memory: add namespaces support in CLI flags",
+    "labels": [
+      "good first issue",
+      "enhancement"
+    ],
+    "body": "Add a --namespace option to CLI and thread it to vector_store tool calls in examples."
+  },
+  {
+    "title": "Docs: add 'Architecture diagram (Mermaid) \u2192 PNG' in /assets",
+    "labels": [
+      "good first issue",
+      "documentation"
+    ],
+    "body": "Export the Mermaid diagram to a PNG and embed in README/docs for social previews."
+  },
+  {
+    "title": "Packaging: publish to PyPI (hatch build)",
+    "labels": [
+      "enhancement"
+    ],
+    "body": "Add a GitHub Action job (manual) to build and publish the package to TestPyPI, then PyPI."
+  },
+  {
+    "title": "Tool: add arXiv search (api via arxiv.org)",
+    "labels": [
+      "tools",
+      "enhancement"
+    ],
+    "body": "Implement a simple arXiv search tool (title/date/author filters) and summarize first N results."
+  }
+]

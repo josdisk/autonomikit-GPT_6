@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1020;
+  --card: #0f172a;
+  --muted: #94a3b8;
+}
+body { background: var(--bg); color: white; }
+.container { max-width: 980px; margin: 0 auto; padding: 2rem; }
+.card { background: var(--card); border-radius: 1rem; padding: 1.25rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+.button { @apply px-4 py-2 rounded-xl font-semibold; background: white; color: black; }
+.input { @apply w-full rounded-xl p-3; background: #111827; color: white; border: 1px solid #334155; }
+.label { @apply text-sm text-slate-300; }
+.badge { @apply inline-block text-xs px-2 py-0.5 rounded-full; background: #1f2937; color: #93c5fd;}

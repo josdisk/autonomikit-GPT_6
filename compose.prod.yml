@@ -1,0 +1,23 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: autonomikit_api
+    env_file: .env
+    ports:
+      - "8000:8000"
+
+  web:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+      args:
+        - API_BASE_URL=http://localhost:8000
+    container_name: autonomikit_web
+    environment:
+      - API_BASE_URL=http://api:8000
+    depends_on:
+      - api
+    ports:
+      - "3000:3000"

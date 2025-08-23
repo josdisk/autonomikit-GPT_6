@@ -1,0 +1,19 @@
+site_name: AutonomiKit‑GPT
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - Architecture: architecture.md
+  - Dashboard: dashboard.md
+  - Deploy: deploy.md
+  - Tools: tools.md
+  - Publishing: publishing.md

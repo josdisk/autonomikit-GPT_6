@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "env": {
+    "API_BASE_URL": "https://your-api.example.com"
+  }
+}

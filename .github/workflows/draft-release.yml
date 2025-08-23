@@ -1,0 +1,24 @@
+name: Draft GitHub Release
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag (e.g., v0.1.0)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create draft release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.tag }}
+          name: AutonomiKit-GPT ${{ inputs.tag }}
+          draft: true
+          body_path: .github/RELEASE_NOTES.md

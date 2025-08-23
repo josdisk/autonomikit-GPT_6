@@ -1,0 +1,53 @@
+name: Seed Issues
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create labels and issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = '.github/seed_issues.json';
+            if (!fs.existsSync(path)) {
+              core.setFailed('Missing .github/seed_issues.json');
+            }
+            const issues = JSON.parse(fs.readFileSync(path, 'utf8'));
+            // Ensure labels exist
+            const uniqueLabels = [...new Set(issues.flatMap(i => i.labels || []))];
+            for (const label of uniqueLabels) {
+              try {
+                await github.rest.issues.getLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: label,
+                });
+              } catch (e) {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: label,
+                  color: '0e8a16',
+                  description: 'Auto-created by seed-issues workflow'
+                });
+              }
+            }
+            // Create issues
+            for (const i of issues) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: i.title,
+                body: i.body || '',
+                labels: i.labels || []
+              });
+            }
+            core.notice(`Seeded ${issues.length} issues.`);
